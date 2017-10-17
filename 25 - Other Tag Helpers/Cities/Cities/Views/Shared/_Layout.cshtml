@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cities</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="m-1 p-1">
+    <cache expires-sliding="@TimeSpan.FromSeconds(10)"
+           vary-by="@ViewContext.RouteData.Values["action"]">
+        @await Component.InvokeAsync("Time")
+    </cache>
+    <div>@RenderBody()</div>
+</body>
+</html>

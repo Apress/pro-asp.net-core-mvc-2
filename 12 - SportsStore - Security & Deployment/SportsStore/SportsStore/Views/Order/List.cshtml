@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Order>
+
+@{
+    ViewBag.Title = "Orders";
+    Layout = "_AdminLayout";
+}
+
+@if (Model.Count() > 0) {
+
+    <table class="table table-bordered table-striped">
+        <tr><th>Name</th><th>Zip</th><th colspan="2">Details</th><th></th></tr>
+        @foreach (Order o in Model) {
+            <tr>
+                <td>@o.Name</td>
+                <td>@o.Zip</td>
+                <th>Product</th>
+                <th>Quantity</th>
+                <td>
+                    <form asp-action="MarkShipped" method="post">
+                        <input type="hidden" name="orderId" value="@o.OrderID" />
+                        <button type="submit" class="btn btn-sm btn-danger">
+                            Ship
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            @foreach (CartLine line in o.Lines) {
+                <tr>
+                    <td colspan="2"></td>
+                    <td>@line.Product.Name</td>
+                    <td>@line.Quantity</td>
+                    <td></td>
+                </tr>
+
+            }
+        }
+    </table>
+} else {
+    <div class="text-center">No Unshipped Orders</div>
+}

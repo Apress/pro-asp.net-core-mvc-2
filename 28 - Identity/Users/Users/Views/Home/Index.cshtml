@@ -1,0 +1,9 @@
+﻿@model Dictionary<string, object>
+
+<div class="bg-primary m-1 p-1 text-white"><h4>User Details</h4></div>
+
+<table class="table table-sm table-bordered m-1 p-1">
+    @foreach (var kvp in Model) {
+        <tr><th>@kvp.Key</th><td>@kvp.Value</td></tr>
+    }
+</table>

@@ -1,0 +1,27 @@
+﻿@{ Layout = null; }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Razor</title>
+    <link asp-href-include="lib/bootstrap/dist/css/*.min.css" rel="stylesheet" />
+    <script id="jsonData" type="application/json">
+        @Json.Serialize(new string[] { "Apple", "Orange", "Pear" })
+    </script>
+    <script asp-src-include="lib/jquery/dist/*.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var list = $("#list")
+            JSON.parse($("#jsonData").text()).forEach(function (val) {
+                console.log("Val: " + val);
+                list.append($("<li>").text(val));
+            });
+        });
+    </script>
+</head>
+<body class="m-1 p-1">
+    This is the List View
+    <ul id="list"></ul>
+</body>
+</html>

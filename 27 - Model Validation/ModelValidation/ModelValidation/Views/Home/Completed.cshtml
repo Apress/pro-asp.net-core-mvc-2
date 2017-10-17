@@ -1,0 +1,16 @@
+﻿@model Appointment
+@{ Layout = "_Layout"; }
+
+<div class="bg-success m-1 p-1 text-white"><h2>Your Appointment</h2></div>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Your name is:</th>
+        <td>@Model.ClientName</td>
+    </tr>
+    <tr>
+        <th>Your appontment date is:</th>
+        <td>@Model.Date.ToString("d")</td>
+    </tr>
+</table>
+<a class="btn btn-success" asp-action="Index">Make Another Appointment</a>

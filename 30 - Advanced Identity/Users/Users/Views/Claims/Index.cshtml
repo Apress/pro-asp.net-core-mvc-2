@@ -1,0 +1,24 @@
+﻿@model IEnumerable<System.Security.Claims.Claim>
+
+<div class="bg-primary m-1 p-1 text-white"><h4>Claims</h4></div>
+
+<table class="table table-sm table-bordered">
+    <tr>
+        <th>Subject</th>
+        <th>Issuer</th>
+        <th>Type</th>
+        <th>Value</th>
+    </tr>
+    @if (Model == null || Model.Count() == 0) {
+        <tr><td colspan="4" class="text-center">No Claims</td></tr>
+    } else {
+        @foreach (var claim in Model.OrderBy(x => x.Type)) {
+            <tr>
+                <td>@claim.Subject.Name</td>
+                <td>@claim.Issuer</td>
+                <td identity-claim-type="@claim.Type"></td>
+                <td>@claim.Value</td>
+            </tr>
+        }
+    }
+</table>

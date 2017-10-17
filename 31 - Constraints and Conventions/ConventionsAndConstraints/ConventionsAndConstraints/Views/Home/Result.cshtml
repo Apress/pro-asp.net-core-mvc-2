@@ -1,0 +1,17 @@
+﻿@model Result
+@{ Layout = null; }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Result</title>
+</head>
+<body class="m-1 p-1">
+    <table class="table table-sm table-bordered">
+        <tr><th>Controller:</th><td>@Model.Controller</td></tr>
+        <tr><th>Action:</th><td>@Model.Action</td></tr>
+    </table>
+</body>
+</html>

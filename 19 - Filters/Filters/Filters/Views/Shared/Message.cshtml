@@ -1,0 +1,25 @@
+﻿@{ Layout = null; }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Filters</title>
+    <link asp-href-include="lib/bootstrap/dist/css/*.min.css" rel="stylesheet" />
+</head>
+<body class="m-1 p-1">
+    @if (Model is string) {
+        @Model
+    } else if (Model is IDictionary<string, string>) {
+        var dict = Model as IDictionary<string, string>;
+        <table class="table table-sm table-striped table-bordered">
+            <thead><tr><th>Name</th><th>Value</th></tr></thead>
+            <tbody>
+                @foreach (var kvp in dict) {
+                    <tr><td>@kvp.Key</td><td>@kvp.Value</td></tr>
+                }
+            </tbody>
+        </table>
+    }
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿@model City
+@addTagHelper Cities.Infrastructure.TagHelpers.SelectOptionTagHelper, Cities
+
+@{  Layout = "_Layout"; }
+
+<form method="post" asp-controller="Home" asp-action="Create"
+      asp-antiforgery="true">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input class="form-control" asp-for="Name" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Country"></label>
+        <select class="form-control" asp-for="Country" asp-items="ViewBag.Countries">
+            <option disabled selected value="">Select a Country</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Population"></label>
+        <input class="form-control" asp-for="Population" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Notes"></label>
+        <textarea class="form-control" asp-for="Notes"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+    <a class="btn btn-primary" href="/Home/Index">Cancel</a>
+</form>

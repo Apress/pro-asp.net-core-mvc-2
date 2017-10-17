@@ -1,0 +1,10 @@
+﻿@model IEnumerable<string>
+
+<div class="bg-info">
+    This is the message from the partial view.
+    <ul>
+        @foreach (string str in Model) {
+            <li>@str</li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,23 @@
+﻿@model Cities.Models.City
+
+@{  Layout = "_Layout"; }
+
+<form method="post">
+    <div class="form-group">
+        <label helper-for="Name" />
+        <input helper-for="Name" />
+    </div>
+    <div class="form-group">
+        <label helper-for="Country" />
+        <input helper-for="Country" />
+    </div>
+    <div class="form-group">
+        <label helper-for="Population" />
+        <input helper-for="Population" />
+    </div>
+    <div theme="primary">
+        <button type="submit">Add</button>
+        <button type="reset">Reset</button>
+        <a href="/Home/Index">Cancel</a>
+    </div>
+</form>

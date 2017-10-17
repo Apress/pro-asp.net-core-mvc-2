@@ -1,0 +1,30 @@
+﻿@if (Model is IEnumerable<ProtectedDocument>) {
+    <div class="bg-primary m-1 p-1 text-white">
+        <h4>Documents (@User?.Identity?.Name)</h4>
+    </div>
+    <table class="table table-sm table-bordered">
+        <tr><th>Title</th><th>Author</th><th>Editor</th><th></th></tr>
+        @foreach (var doc in Model) {
+            <tr>
+                <td>@doc.Title</td>
+                <td>@doc.Author</td>
+                <td>@doc.Editor</td>
+                <td>
+                    <a class="btn btn-sm btn-primary" asp-action="Edit"
+                       asp-route-title="@doc.Title">
+                        Edit
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+} else {
+    <div class="bg-primary m-1 p-1">
+        <h4>Editing @Model.Title (@User?.Identity?.Name)</h4>
+    </div>
+    <div class="m-1 p-1">
+        Document editing feature would go here...
+    </div>
+    <a asp-action="Index" class="btn btn-primary">Done</a>
+}
+<a asp-action="Logout" asp-controller="Account" class="btn btn-danger">Logout</a>

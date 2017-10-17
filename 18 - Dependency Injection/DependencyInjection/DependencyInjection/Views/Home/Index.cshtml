@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Product>
+@{ Layout = null; }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dependency Injection</title>
+    <link rel="stylesheet" asp-href-include="lib/bootstrap/dist/css/*.min.css" />
+</head>
+<body class="m-1 p-1">
+    @if (ViewData.Count > 0) {
+        <table class="table table-bordered table-sm table-striped">
+            @foreach (var kvp in ViewData) {
+                <tr><td>@kvp.Key</td><td>@kvp.Value</td></tr>
+            }
+        </table>
+    }
+    <table class="table table-bordered table-sm table-striped">
+        <thead>
+            <tr><th>Name</th><th>Price</th></tr>
+        </thead>
+        <tbody>
+            @if (Model == null) {
+                <tr><td colspan="3" class="text-center">No Model Data</td></tr>
+            } else {
+                @foreach (var p in Model) {
+                    <tr>
+                        <td>@p.Name</td>
+                        <td>@string.Format("{0:C2}", p.Price)</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</body>
+</html>

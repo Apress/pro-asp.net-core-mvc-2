@@ -1,0 +1,28 @@
+﻿@model Result
+@{ Layout = null; }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Routing</title>
+    <link rel="stylesheet" asp-href-include="lib/bootstrap/dist/css/*.min.css" />
+</head>
+<body class="m-1 p-1">
+    <table class="table table-bordered table-striped table-sm">
+        <tr><th>Controller:</th><td>@Model.Controller</td></tr>
+        <tr><th>Action:</th><td>@Model.Action</td></tr>
+        @foreach (string key in Model.Data.Keys) {
+            <tr><th>@key :</th><td>@Model.Data[key]</td></tr>
+        }
+    </table>
+    <a asp-route-legacyurl="/articles/Windows_3.1_Overview.html"
+       class="btn btn-primary">
+        This is an outgoing URL
+    </a>
+    <p>
+        URL: @Url.Action(null, null,
+           new { legacyurl = "/articles/Windows_3.1_Overview.html" })
+    </p>
+</body>
+</html>

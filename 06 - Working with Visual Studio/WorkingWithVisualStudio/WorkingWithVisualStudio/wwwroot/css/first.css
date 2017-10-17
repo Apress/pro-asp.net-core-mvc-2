@@ -1,0 +1,11 @@
+﻿h3 {
+    font-size: 18pt;
+    font-family: sans-serif;
+}
+
+table, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    font-family: sans-serif;
+}

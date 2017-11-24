@@ -1,0 +1,9 @@
+Chapter 3 summary
+- "discussed the significance of the domain model and introduced dependency injection, which allows you to decouple components to enforce a strict separation between
+the parts of an application."
+
+This doesn't seem to be properly described in this chapter. I think it would be more fitting to do this summary on chapter 18, where there is an indepth analysis of dependency injection.
+
+Code review
+- Using a <p> tag as a div tag.
+Might be better to add a container div. instead of the paragraph tag.

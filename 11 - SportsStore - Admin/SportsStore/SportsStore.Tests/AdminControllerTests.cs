@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Moq;
 using SportsStore.Controllers;
 using SportsStore.Models;
+using System.Collections.Generic;
+using System.Linq;
 using Xunit;
-using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
 namespace SportsStore.Tests {
 
@@ -20,14 +20,11 @@ namespace SportsStore.Tests {
                 new Product {ProductID = 2, Name = "P2"},
                 new Product {ProductID = 3, Name = "P3"},
             }.AsQueryable<Product>());
-
             // Arrange - create a controller
             AdminController target = new AdminController(mock.Object);
-
             // Action
             Product[] result
                 = GetViewModel<IEnumerable<Product>>(target.Index())?.ToArray();
-
             // Assert
             Assert.Equal(3, result.Length);
             Assert.Equal("P1", result[0].Name);
@@ -79,7 +76,7 @@ namespace SportsStore.Tests {
             Assert.Null(result);
         }
 
-        [Fact]
+      [Fact]
         public void Can_Save_Valid_Changes() {
             // Arrange - create mock repository
             Mock<IProductRepository> mock = new Mock<IProductRepository>();
@@ -145,7 +142,6 @@ namespace SportsStore.Tests {
             // called with the correct Product
             mock.Verify(m => m.DeleteProduct(prod.ProductID));
         }
-
 
         private T GetViewModel<T>(IActionResult result) where T : class {
             return (result as ViewResult)?.ViewData.Model as T;

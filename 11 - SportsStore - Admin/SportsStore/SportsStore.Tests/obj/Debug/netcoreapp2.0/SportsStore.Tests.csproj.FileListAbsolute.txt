@@ -1,0 +1,16 @@
+C:\Users\adam\Downloads\xtest\SportsStore\SportsStore.Tests\obj\Debug\netcoreapp2.0\SportsStore.Tests.csprojResolveAssemblyReference.cache
+C:\Users\adam\Downloads\xtest\SportsStore\SportsStore.Tests\obj\Debug\netcoreapp2.0\SportsStore.Tests.csproj.CoreCompileInputs.cache
+C:\Users\adam\Downloads\xtest\SportsStore\SportsStore.Tests\obj\Debug\netcoreapp2.0\SportsStore.Tests.AssemblyInfoInputs.cache
+C:\Users\adam\Downloads\xtest\SportsStore\SportsStore.Tests\obj\Debug\netcoreapp2.0\SportsStore.Tests.AssemblyInfo.cs
+C:\Users\adam\Downloads\xtest\SportsStore\SportsStore.Tests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\adam\Downloads\xtest\SportsStore\SportsStore.Tests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netstandard15.dll
+C:\Users\adam\Downloads\xtest\SportsStore\SportsStore.Tests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netstandard15.dll
+C:\Users\adam\Downloads\xtest\SportsStore\SportsStore.Tests\bin\Debug\netcoreapp2.0\SportsStore.Tests.deps.json
+C:\Users\adam\Downloads\xtest\SportsStore\SportsStore.Tests\bin\Debug\netcoreapp2.0\SportsStore.Tests.runtimeconfig.json
+C:\Users\adam\Downloads\xtest\SportsStore\SportsStore.Tests\bin\Debug\netcoreapp2.0\SportsStore.Tests.runtimeconfig.dev.json
+C:\Users\adam\Downloads\xtest\SportsStore\SportsStore.Tests\bin\Debug\netcoreapp2.0\SportsStore.Tests.dll
+C:\Users\adam\Downloads\xtest\SportsStore\SportsStore.Tests\bin\Debug\netcoreapp2.0\SportsStore.Tests.pdb
+C:\Users\adam\Downloads\xtest\SportsStore\SportsStore.Tests\bin\Debug\netcoreapp2.0\SportsStore.dll
+C:\Users\adam\Downloads\xtest\SportsStore\SportsStore.Tests\bin\Debug\netcoreapp2.0\SportsStore.pdb
+C:\Users\adam\Downloads\xtest\SportsStore\SportsStore.Tests\obj\Debug\netcoreapp2.0\SportsStore.Tests.dll
+C:\Users\adam\Downloads\xtest\SportsStore\SportsStore.Tests\obj\Debug\netcoreapp2.0\SportsStore.Tests.pdb

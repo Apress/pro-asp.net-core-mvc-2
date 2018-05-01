@@ -1,0 +1,12 @@
+﻿@model Person
+@{ Layout = "_Layout"; }
+
+<div class="bg-primary m-1 p-1 text-white"><h2>Person</h2></div>
+<table class="table table-sm table-bordered table-striped">
+    <tr><th>PersonId:</th><td>@Model.PersonId</td></tr>
+    <tr><th>First Name:</th><td>@Model.FirstName</td></tr>
+    <tr><th>Last Name:</th><td>@Model.LastName</td></tr>
+    <tr><th>Role:</th><td>@Model.Role</td></tr>
+    <tr><th>City:</th><td>@Model.HomeAddress?.City</td></tr>
+    <tr><th>Country:</th><td>@Model.HomeAddress?.Country</td></tr>
+</table>

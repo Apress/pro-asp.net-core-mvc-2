@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Address";
+    Layout = "_Layout";
+}
+
+@section scripts {
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function (e) {
+                $.ajax("/Home/Body", {
+                    method: "post",
+                    contentType: "application/json",
+                    data: JSON.stringify({
+                        firstName: "Bob",
+                        lastName: "Smith"
+                    }),
+                    success: function (data) {
+                        $("#firstName").text(data.firstName);
+                        $("#lastName").text(data.lastName);
+                    }
+                });
+            });
+        });
+    </script>
+}
+
+<table class="table table-sm table-bordered table-striped">
+    <tr><th>First Name:</th><td id="firstName"></td></tr>
+    <tr><th>Last Name:</th><td id="lastName"></td></tr>
+</table>
+<button class="btn btn-primary">Submit</button>

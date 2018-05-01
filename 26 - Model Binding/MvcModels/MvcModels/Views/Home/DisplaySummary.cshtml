@@ -1,0 +1,12 @@
+﻿@model AddressSummary
+@{
+    ViewBag.Title = "DisplaySummary";
+    Layout = "_Layout";
+}
+
+<div class="bg-primary m-1 p-1 text-white"><h2>Address</h2></div>
+
+<table class="table table-sm table-bordered table-striped">
+    <tr><th>City:</th><td>@Model.City</td></tr>
+    <tr><th>Country:</th><td>@Model.Country</td></tr>
+</table>

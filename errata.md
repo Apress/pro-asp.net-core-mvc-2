@@ -1,5 +1,7 @@
 # Errata for *Pro ASP.NET Core MVC 2*
 
+## Bower Configuration Changes
+
 Microsoft has removed the Bower Configuration File template from Visual Studio. To create the Bower file required by the example projects:
 
 1. Right-click on the project item in the Solution Explorer window, select Add > New Item, select JSON File from the ASP.NET Core/General category and set the file name to `.bowerrc` (note the letter `r` appears twice), and click the Add button.
@@ -26,3 +28,7 @@ Microsoft has removed the Bower Configuration File template from Visual Studio. 
 5. Save the changes to the `bower.json` file and Visual Studio will download the Bootstrap package.
 
 (Thanks to Michael Horn for reporting this problem)
+
+## MVC View Page Change
+
+Microsoft has removed the option for MVC View Page. Now you can only create Razor View instead. This has no impact on the code.

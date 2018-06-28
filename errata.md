@@ -7,7 +7,8 @@ Microsoft has removed the Bower Configuration File template from Visual Studio. 
 
     ````
     {
-        "directory": "wwwroot/lib"
+        "directory": "wwwroot/lib",
+        "registry": "https://registry.bower.io"
     }
 
 3. Save the changes. (This is important - you must save the changes to the `.bowerrc` file before proceeding)

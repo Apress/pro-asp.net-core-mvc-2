@@ -3,6 +3,8 @@
 
 Microsoft has removed the Bower Configuration File template from Visual Studio and the source for Bower packages has changed.
 
+**You can continue using Bower by following the instructions below or you can use the LibMan tool, which Microsoft has provided as a replacement and which is described [here](Using%20Libman.md)**
+
 To create the Bower file required by the example projects:
 
 1. Right-click on the project item in the Solution Explorer window, select Add > New Item, select JSON File from the ASP.NET Core/General category and set the file name to `.bowerrc` (note the letter `r` appears twice), and click the Add button.

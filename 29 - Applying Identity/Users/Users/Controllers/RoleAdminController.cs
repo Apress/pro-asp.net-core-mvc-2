@@ -34,7 +34,7 @@ namespace Users.Controllers {
                     AddErrorsFromResult(result);
                 }
             }
-            return View(name);
+            return View(model:name);
         }
 
         [HttpPost]

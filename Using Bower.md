@@ -3,7 +3,7 @@
 
 Microsoft has removed the Bower Configuration File template from Visual Studio and the source for Bower packages has changed.
 
-**You can continue using Bower by following the instructions below or you can use the LibMan tool, which Microsoft has provided as a replacement and which is described [here](Using%20Libman.md)**
+**You can continue using Bower by following the instructions below or you can use the LibMan tool, which Microsoft has provided as a replacement and which is described [here](Using%20LibMan.md)**
 
 To create the Bower file required by the example projects:
 

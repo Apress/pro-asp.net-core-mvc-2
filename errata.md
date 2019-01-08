@@ -32,6 +32,12 @@ To create the Bower file required by the example projects:
 
 ---
 
+Microsoft has renamed the Visual Studio template used to create views. Use the **Razor View** item when adding a view to a project, which is the new name for the of **MVC View Page** item.
+
+(Thanks to Jonathan Murfey for reporting this problem)
+
+---
+
 On **Page 859**, the jQuery code that selects invalid elements and applies a Bootstrap class won't work with the final release of Bootstrap 4 (although it does work with the pre-release version specified in the book). If you want to use the final release, then you will need to replace the contents of the `script` element that contains the jQuery code in **Listing 27-10** with the following:
 
     ...
